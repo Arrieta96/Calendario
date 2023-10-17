@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: #F1F1F1;
+}
+
+.content {
+    left: 50%;
+    margin: 0 0 0 -250px;
+    margin-top: 100px;
+    position: absolute;
+    width: 500px;
+}
+
+.calendar {
+    text-align: center;
+}
+
+.content .calendar header {
+    position: relative;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.btn-ant, .btn-pro {
+    position: absolute;
+    top: 50%;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    margin-top: -16px;
+    border: 2px solid #CBD1D2;
+    border-radius: 50%;
+    color: #CBD1D2;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-ant {
+    left: 80px;
+}
+
+.btn-pro {
+    right: 80px;
+}
+
+.btn-ant:hover,.btn-pro:hover {
+    background: #CBD1D2;
+    color: #F9F9F9;
+}
+
+.calendar table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.calendar thead {
+    background: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.calendar thead td {
+    height: 67.4px;
+}
+
+.calendar td {
+    border: 1px solid #CBD1D2;
+    height: 71.4px;
+    text-align: center;
+    width: 71.4px;
+}
+
+.calendar tbody td {
+    cursor: pointer;
+}
+
+.calendar tbody td:hover {
+    background: rgba(0, 173, 223, 0.8);
+    color: #F9F9F9;
+}
+
+.calendar table .current-day {
+    background: #00ADDF;
+    color: #F9F9F9;
+}
+
+.calendar .last-month, .calendar .next-month{
+    color: #CBD1D2;
+}
+
+.calendar .last-month:hover, .calendar .next-month:hover{
+    background: #98A0A0;
+}
+
+.event {
+    position: relative;
+}
+
+.event:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    left: 50%;
+    bottom: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    background: #00ADDF;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.event:hover::after {
+    background: #F9F9F9;
+}
+
+.event.current-day:after {
+    background: #F9F9F9;
+}
